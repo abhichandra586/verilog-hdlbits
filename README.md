@@ -10,22 +10,20 @@ HDLBits is a collection of small circuit design exercises for practising digital
 
 Part of a broader VLSI learning portfolio — visit [github.com/abhichandra586](https://github.com/abhichandra586) to explore the full set of repositories covering synthesis and simulation.
 
----
-
 ## 📁 Repository Structure
-
 ```
 verilog-hdlbits/
-├── 01-getting-started/         # First steps with Verilog
-├── 02-basics/                  # Wire, gate, and combinational logic fundamentals
-├── 03-vectors/                 # Vector declarations, slicing, and operations
-├── 04-modules-hierarchy/       # Module instantiation and hierarchy
-├── 05-procedures/              # Always blocks, if/case statements
-├── 06-more-verilog-features/   # Advanced operators and replication
+├── 01-getting-started/       # First steps with Verilog
+├── 02-basics/                # Wire, gate, and combinational logic fundamentals
+├── 03-vectors/               # Vector declarations, slicing, and operations
+├── 04-modules-hierarchy/     # Module instantiation and hierarchy
+├── 05-procedures/            # Always blocks, if/case statements
+├── 06-more-verilog-features/ # Advanced operators and replication
+├── 07-basic-gates/           # Basic gate problems and combinational circuits
+├── 08-multiplexers/          # Multiplexer designs
+├── 09-arithmetic-circuits/   # Adders and arithmetic building blocks
 └── README.md
 ```
-
----
 
 ## 📂 Folder Breakdown
 
@@ -33,114 +31,147 @@ verilog-hdlbits/
 
 Introductory problems designed to familiarize you with the HDLBits environment and the most basic Verilog syntax.
 
-| File           | Problem                                     |
-|----------------|---------------------------------------------|
-| `step_one.v`   | Step One — output a constant logic-1        |
-| `output_zero.v`| Output Zero — drive a wire to logic-0       |
-
----
+| File | Problem |
+|------|---------|
+| `step_one.v` | Step One — output a constant logic-1 |
+| `output_zero.v` | Output Zero — drive a wire to logic-0 |
 
 ### 02 · Basics
 
 Combinational logic using simple wire assignments and fundamental logic gates. Covers the building blocks of any digital circuit.
 
-| File           | Problem                                           |
-|----------------|---------------------------------------------------|
-| `simple_wire.v`  | Simple Wire — pass a signal through             |
-| `four_wires.v`   | Four Wires — connect multiple ports             |
-| `wire_decl.v`    | Declaring Wires — intermediate wire signals     |
-| `and_gate.v`     | AND Gate                                        |
-| `nor_gate.v`     | NOR Gate                                        |
-| `not_gate.v`     | NOT Gate                                        |
-| `xnor_gate.v`    | XNOR Gate                                       |
-| `7458_chip.v`    | 7458 Chip — multi-gate combinational circuit    |
-
----
+| File | Problem |
+|------|---------|
+| `simple_wire.v` | Simple Wire — pass a signal through |
+| `four_wires.v` | Four Wires — connect multiple ports |
+| `wire_decl.v` | Declaring Wires — intermediate wire signals |
+| `and_gate.v` | AND Gate |
+| `nor_gate.v` | NOR Gate |
+| `not_gate.v` | NOT Gate |
+| `xnor_gate.v` | XNOR Gate |
+| `7458_chip.v` | 7458 Chip — multi-gate combinational circuit |
 
 ### 03 · Vectors
 
 Vector (bus) declarations, part-selects, concatenation, and replication — essential for working with multi-bit data paths.
 
-| File             | Problem                                              |
-|------------------|------------------------------------------------------|
-| `vector0.v`      | Vector0 — basic 3-bit vector                       |
-| `vector1.v`      | Vector1 — part-selects                             |
-| `vector2.v`      | Vector2 — 32-bit endianness and splits             |
-| `vector3.v`      | Vector3 — Concatenation operator                  |
-| `vector4.v`      | Vector4 — Replication operator                    |
-| `vector5.v`      | Vector5 — More replication                        |
-| `vector_r.v`     | Vector Reversal — reverse bit order               |
-| `vector_gates.v` | Vector Gates — bitwise operations on buses        |
-| `gates4.v`       | 4-Input Gates — AND/OR/XOR across vectors         |
-
----
+| File | Problem |
+|------|---------|
+| `vector0.v` | Vector0 — basic 3-bit vector |
+| `vector1.v` | Vector1 — part-selects |
+| `vector2.v` | Vector2 — 32-bit endianness and splits |
+| `vector3.v` | Vector3 — Concatenation operator |
+| `vector4.v` | Vector4 — Replication operator |
+| `vector5.v` | Vector5 — More replication |
+| `vector_r.v` | Vector Reversal — reverse bit order |
+| `vector_gates.v` | Vector Gates — bitwise operations on buses |
+| `gates4.v` | 4-Input Gates — AND/OR/XOR across vectors |
 
 ### 04 · Modules & Hierarchy
 
 Structural Verilog: instantiating modules by position and by name, building adder chains, and constructing hierarchical designs.
 
-| File                   | Problem                                              |
-|------------------------|------------------------------------------------------|
-| `module.v`             | Module — instantiate a sub-module                  |
-| `module_pos.v`         | Connecting Ports by Position                       |
-| `module_name.v`        | Connecting Ports by Name                           |
-| `module_shift.v`       | Module Shift — chained D flip-flop instances       |
-| `module_shift8.v`      | Module Shift 8 — 8-bit shift using instances       |
-| `adder1.v`             | Module Add — 16-bit adder from two 8-bit adders    |
-| `adder2.v`             | Adder — carry ripple adder hierarchy               |
-| `carry_select_adder.v` | Carry Select Adder                                 |
-| `module_addsub.v`      | Adder-Subtractor — XOR-based sign control          |
-
----
+| File | Problem |
+|------|---------|
+| `module.v` | Module — instantiate a sub-module |
+| `module_pos.v` | Connecting Ports by Position |
+| `module_name.v` | Connecting Ports by Name |
+| `module_shift.v` | Module Shift — chained D flip-flop instances |
+| `module_shift8.v` | Module Shift 8 — 8-bit shift using instances |
+| `adder1.v` | Module Add — 16-bit adder from two 8-bit adders |
+| `adder2.v` | Adder — carry ripple adder hierarchy |
+| `carry_select_adder.v` | Carry Select Adder |
+| `module_addsub.v` | Adder-Subtractor — XOR-based sign control |
 
 ### 05 · Procedures
 
-Behavioural Verilog using `always` blocks, if-else conditionals, case statements, and latch avoidance techniques.
+Behavioural Verilog using always blocks, if-else conditionals, case statements, and latch avoidance techniques.
 
-| File                 | Problem                                                  |
-|----------------------|----------------------------------------------------------|
-| `always_block1.v`    | Always Block 1 — combinational `always @(*)`           |
-| `always_block2.v`    | Always Block 2 — clocked `always @(posedge clk)`       |
-| `always_if.v`        | Always If — priority mux with if-else                  |
-| `always_if2.v`       | Always If 2 — avoiding unintended latches              |
-| `always_case.v`      | Always Case — 6-to-1 multiplexer                       |
-| `always_case2.v`     | Always Case 2 — priority encoder                       |
-| `always_casez.v`     | Always CaseZ — don't-care matching                     |
-| `always_nolatches.v` | Always No Latches — keyboard scancode decoder          |
-
----
+| File | Problem |
+|------|---------|
+| `always_block1.v` | Always Block 1 — combinational always @(*) |
+| `always_block2.v` | Always Block 2 — clocked always @(posedge clk) |
+| `always_if.v` | Always If — priority mux with if-else |
+| `always_if2.v` | Always If 2 — avoiding unintended latches |
+| `always_case.v` | Always Case — 6-to-1 multiplexer |
+| `always_case2.v` | Always Case 2 — priority encoder |
+| `always_casez.v` | Always CaseZ — don't-care matching |
+| `always_nolatches.v` | Always No Latches — keyboard scancode decoder |
 
 ### 06 · More Verilog Features
 
 Advanced language features: reduction operators, the ternary conditional, generate-style replication, and large gate arrays.
 
-| File                          | Problem                                                  |
-|-------------------------------|----------------------------------------------------------|
-| `reduction_operators.v`       | Reduction Operators — `&`, `|`, `^`                      |
-| `ternary_operator.v`          | Ternary Operator — conditional expression in `assign`  |
-| `vector_100r.v`               | Vector Reversal 2 — 100-bit bit-reversal with generate  |
-| `gates100.v`                  | Gates 100 — 100-bit gate array                         |
-| `255-bit-population-count.v`  | Population Count — count set bits in a 255-bit vector   |
+| File | Problem |
+|------|---------|
+| `reduction_operators.v` | Reduction Operators — &, \|, ^ across a vector |
+| `ternary_operator.v` | Ternary Operator — conditional expression in assign |
+| `vector_100r.v` | Vector Reversal 2 — 100-bit bit-reversal with generate |
+| `gates100.v` | Gates 100 — 100-bit gate array |
+| `255-bit-population-count.v` | Population Count — count set bits in a 255-bit vector |
 
----
+### 07 · Basic Gates
+
+Classic gate-level and combinational problems covering truth tables, simple circuit synthesis, and multi-gate structures.
+
+| File | Problem |
+|------|---------|
+| `wire.v` | Wire — pass-through wire |
+| `ground.v` | Ground — drive output to logic-0 |
+| `nor_gate.v` | NOR Gate |
+| `another_gate.v` | Another Gate — XNOR |
+| `two_gates.v` | Two Gates — chain of gates |
+| `more_logic_gates.v` | More Logic Gates — 7 gates on same inputs |
+| `7420_chip.v` | 7420 Chip — dual 4-input NAND |
+| `truth_tables.v` | Truth Tables — synthesize from truth table |
+| `simple_circuitA.v` | Simple Circuit A |
+| `simple_circuitB.v` | Simple Circuit B |
+| `combine_ab.v` | Combine A and B |
+| `ring_or_vibrate.v` | Ring or Vibrate |
+| `thermostat.v` | Thermostat |
+| `2bit_equality.v` | Two-bit Equality |
+| `gates_and_vectors.v` | Gates and Vectors — bitwise ops on buses |
+| `gates_v100.v` | Longer Vectors and Gates — 100-bit gate array |
+| `pop_count3.v` | 3-bit Population Count |
+
+### 08 · Multiplexers
+
+Multiplexer designs of various widths using assign statements, case constructs, and bit-select indexing.
+
+| File | Problem |
+|------|---------|
+| `mux2to1.v` | 2:1 Multiplexer |
+| `mux2to1_100bit.v` | 2:1 Bus Multiplexer — 100-bit wide |
+| `mux_9to1.v` | 9:1 Multiplexer |
+| `mux_256to1.v` | 256:1 Multiplexer |
+| `mux_256to1_4bit.v` | 256:1 4-bit Multiplexer |
+
+### 09 · Arithmetic Circuits
+
+Fundamental arithmetic building blocks: half adders, full adders, ripple-carry adders, and multi-bit binary adders.
+
+| File | Problem |
+|------|---------|
+| `half_adder.v` | Half Adder |
+| `full_adder.v` | Full Adder |
+| `adder.v` | Adder — ripple-carry adder |
+| `3bit_binary_adder.v` | 3-bit Binary Adder |
 
 ## 🛠️ Tools & Environment
 
-| Tool                    | Purpose                                         |
-|-------------------------|-------------------------------------------------|
-| Icarus Verilog (iverilog) | Open-source Verilog simulation & compilation  |
-| GTKWave                 | Waveform viewer for `.vcd` dump files           |
-| HDLBits Online Judge    | Automated testbench & instant feedback          |
+| Tool | Purpose |
+|------|---------|
+| Icarus Verilog (iverilog) | Open-source Verilog simulation & compilation |
+| GTKWave | Waveform viewer for .vcd dump files |
+| HDLBits Online Judge | Automated testbench & instant feedback |
 
 All `.v` files are written in Verilog-2001 and are compatible with any standard simulator.
 
----
-
 ## 🚀 How to Use
 
-**Browse and study** — each file is self-contained and directly maps to an HDLBits problem. Open the file, read the module, then try the problem yourself on HDLBits before comparing.
+Browse and study — each file is self-contained and directly maps to an HDLBits problem. Open the file, read the module, then try the problem yourself on HDLBits before comparing.
 
-**Simulate locally** — any solution can be compiled and run with Icarus Verilog:
+Simulate locally — any solution can be compiled and run with Icarus Verilog:
 
 ```bash
 # Compile a solution
@@ -153,25 +184,24 @@ vvp sim
 gtkwave dump.vcd
 ```
 
----
-
 ## 📊 Progress
 
-| Section                  | Problems Solved |
-|--------------------------|-----------------|
-| 01 · Getting Started     | 2 / 2 ✅        |
-| 02 · Basics              | 8 / 8 ✅        |
-| 03 · Vectors             | 9 / 9 ✅        |
-| 04 · Modules & Hierarchy | 9 / 9 ✅        |
-| 05 · Procedures          | 8 / 8 ✅        |
-| 06 · More Verilog Features | 5 / 5 ✅      |
-| **Total**                | **41 / 41**     |
-
----
+| Section | Problems Solved |
+|---------|----------------|
+| 01 · Getting Started | 2 / 2 ✅ |
+| 02 · Basics | 8 / 8 ✅ |
+| 03 · Vectors | 9 / 9 ✅ |
+| 04 · Modules & Hierarchy | 9 / 9 ✅ |
+| 05 · Procedures | 8 / 8 ✅ |
+| 06 · More Verilog Features | 5 / 5 ✅ |
+| 07 · Basic Gates | 17 / 17 ✅ |
+| 08 · Multiplexers | 5 / 5 ✅ |
+| 09 · Arithmetic Circuits | 4 / 4 ✅ |
+| **Total** | **67 / 67** |
 
 ## 👤 Author
 
-**Abhi Chandra** — GitHub: [@abhichandra586](https://github.com/abhichandra586)
+Abhi Chandra — GitHub: [@abhichandra586](https://github.com/abhichandra586)
 
 ---
 
