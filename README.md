@@ -22,6 +22,8 @@ verilog-hdlbits/
 ├── 07-basic-gates/           # Basic gate problems and combinational circuits
 ├── 08-multiplexers/          # Multiplexer designs
 ├── 09-arithmetic-circuits/   # Adders and arithmetic building blocks
+├── 10-karnaugh-maps/         # K-map simplification to circuits
+├── 11-latches-and-flipflops/ # Sequential logic: latches and D flip-flops
 └── README.md
 ```
 
@@ -148,14 +150,48 @@ Multiplexer designs of various widths using assign statements, case constructs, 
 
 ### 09 · Arithmetic Circuits
 
-Fundamental arithmetic building blocks: half adders, full adders, ripple-carry adders, and multi-bit binary adders.
+Fundamental arithmetic building blocks: half adders, full adders, ripple-carry adders, wide binary adders, BCD arithmetic, and overflow detection.
 
 | File | Problem |
 |------|---------|
 | `half_adder.v` | Half Adder |
 | `full_adder.v` | Full Adder |
-| `adder.v` | Adder — ripple-carry adder |
 | `3bit_binary_adder.v` | 3-bit Binary Adder |
+| `adder.v` | Adder — ripple-carry adder |
+| `signed_add_overflow.v` | Signed Addition Overflow — detect 2's complement overflow |
+| `100bit_bin_adder.v` | 100-bit Binary Adder |
+| `4digit_bcd_adder.v` | 4-digit BCD Adder — chained BCD full adders |
+
+### 10 · Karnaugh Maps
+
+Translating Karnaugh maps into minimal SOP/POS circuit implementations, including don't-care handling and mux-based realizations.
+
+| File | Problem |
+|------|---------|
+| `kmap1.v` | K-map 1 — 3-variable map |
+| `kmap2.v` | K-map 2 — 4-variable map |
+| `kmap3.v` | K-map 3 — 4-variable map with don't-cares |
+| `kmap4.v` | K-map 4 — 4-variable map |
+| `min_sop_and_pos.v` | Minimum SOP and POS |
+| `kmap5.v` | K-map 5 |
+| `kmap6.v` | K-map 6 |
+| `kmap_with_mux.v` | K-map implemented with a Multiplexer |
+
+### 11 · Latches and Flip-Flops
+
+Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets, byte enables, and intentional latch inference. *(Section in progress.)*
+
+| File | Problem |
+|------|---------|
+| `dff.v` | D Flip-Flop |
+| `dffs.v` | D Flip-Flops — 8-bit register |
+| `dff_with_reset.v` | DFF with (synchronous) Reset |
+| `dff_with_reset_value.v` | DFF with Reset Value — reset to a non-zero constant |
+| `dff_async_reset.v` | DFF with Asynchronous Reset |
+| `dff_with_byte_enable.v` | Dff16e — 16-bit DFF with byte enables and sync active-low reset |
+| `d_latch.v` | Exams/m2014_q4a — D Latch with enable |
+| `dff1.v` | Exams/m2014_q4b — DFF with async reset |
+| `dff2.v` | Exams/m2014_q4c — DFF with sync reset |
 
 ## 🛠️ Tools & Environment
 
@@ -196,8 +232,10 @@ gtkwave dump.vcd
 | 06 · More Verilog Features | 5 / 5 ✅ |
 | 07 · Basic Gates | 17 / 17 ✅ |
 | 08 · Multiplexers | 5 / 5 ✅ |
-| 09 · Arithmetic Circuits | 4 / 4 ✅ |
-| **Total** | **67 / 67** |
+| 09 · Arithmetic Circuits | 7 / 7 ✅ |
+| 10 · Karnaugh Maps | 8 / 8 ✅ |
+| 11 · Latches and Flip-Flops | 9 / 14 🔄 |
+| **Total** | **87 solved** |
 
 ## 👤 Author
 
