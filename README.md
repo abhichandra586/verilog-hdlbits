@@ -179,7 +179,7 @@ Translating Karnaugh maps into minimal SOP/POS circuit implementations, includin
 
 ### 11 · Latches and Flip-Flops
 
-Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets, byte enables, and intentional latch inference. *(Section in progress.)*
+Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets, byte enables, intentional latch inference, mux-FF combinations, JK flip-flops, and edge detection. *(Section in progress.)*
 
 | File | Problem |
 |------|---------|
@@ -192,6 +192,13 @@ Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets
 | `d_latch.v` | Exams/m2014_q4a — D Latch with enable |
 | `dff1.v` | Exams/m2014_q4b — DFF with async reset |
 | `dff2.v` | Exams/m2014_q4c — DFF with sync reset |
+| `dff_with_gate.v` | Exams/m2014_q4d — DFF with XOR feedback gate |
+| `dff_with_mux1.v` | Mt2015_muxdff — Mux + DFF submodule |
+| `dff_with_mux2.v` | Exams/2014_q4a — Two muxes + DFF with load and enable |
+| `dffs_and_gates.v` | Exams/ece241_2014_q4 — Three DFFs with gate feedback |
+| `jkff.v` | Exams/ece241_2013_q7 — JK Flip-Flop |
+| `edge_detect.v` | Edgedetect — Detect a rising edge per bit |
+| `edge_detect2.v` | Edgedetect2 — Detect any edge per bit |
 
 ## 🛠️ Tools & Environment
 
@@ -234,8 +241,8 @@ gtkwave dump.vcd
 | 08 · Multiplexers | 5 / 5 ✅ |
 | 09 · Arithmetic Circuits | 7 / 7 ✅ |
 | 10 · Karnaugh Maps | 8 / 8 ✅ |
-| 11 · Latches and Flip-Flops | 9 / 14 🔄 |
-| **Total** | **87 solved** |
+| 11 · Latches and Flip-Flops | 16 / 18 🔄 |
+| **Total** | **94 solved** |
 
 ## 👤 Author
 
