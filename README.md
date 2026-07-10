@@ -24,6 +24,8 @@ verilog-hdlbits/
 ├── 09-arithmetic-circuits/   # Adders and arithmetic building blocks
 ├── 10-karnaugh-maps/         # K-map simplification to circuits
 ├── 11-latches-and-flipflops/ # Sequential logic: latches and D flip-flops
+├── 12-counters/              # Binary, decade, and decimal counters
+├── 13-shift-registers/       # Shift registers, rotators, and LFSRs
 └── README.md
 ```
 
@@ -179,7 +181,7 @@ Translating Karnaugh maps into minimal SOP/POS circuit implementations, includin
 
 ### 11 · Latches and Flip-Flops
 
-Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets, byte enables, intentional latch inference, mux-FF combinations, JK flip-flops, and edge detection. *(Section in progress.)*
+Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets, byte enables, intentional latch inference, mux-FF combinations, JK flip-flops, and edge detection.
 
 | File | Problem |
 |------|---------|
@@ -199,6 +201,39 @@ Sequential logic fundamentals: D flip-flops, synchronous vs. asynchronous resets
 | `jkff.v` | Exams/ece241_2013_q7 — JK Flip-Flop |
 | `edge_detect.v` | Edgedetect — Detect a rising edge per bit |
 | `edge_detect2.v` | Edgedetect2 — Detect any edge per bit |
+| `edge_capture_register.v` | Edgecapture — Capture falling edges until reset |
+| `dual_edge_triggered_ff.v` | Dualedge — Dual-edge triggered flip-flop |
+
+### 12 · Counters
+
+Binary, decade, and BCD counters with enables, slow-count strategies, and multi-digit cascading — culminating in a 12-hour clock.
+
+| File | Problem |
+|------|---------|
+| `4bit_bin_counter.v` | Count15 — 4-bit binary counter |
+| `decade_counter.v` | Count10 — decade counter (0–9) |
+| `counter_1to10.v` | Count1to10 — counter from 1 to 10 |
+| `slow_decade_counter.v` | Countslow — decade counter with slow enable |
+| `counter_1to12.v` | Counter1-12 — 1-to-12 counter with load and enable |
+| `counter_1000.v` | Counter1000 — 1 Hz pulse from a 1000 Hz clock |
+| `4digit_decimal_counter.v` | Countbcd — 4-digit BCD counter with digit enables |
+| `12_hour_clock.v` | Count clock — 12-hour clock with AM/PM |
+
+### 13 · Shift Registers
+
+Shift registers, rotators, arithmetic shifters, and linear feedback shift registers (LFSRs) — including structural mux-DFF designs and a 3-input LUT built from a shift register.
+
+| File | Problem |
+|------|---------|
+| `4bit_shift_register.v` | Shift4 — 4-bit shift register with async reset, load, and enable |
+| `left_right_rotator.v` | Rotate100 — 100-bit left/right rotator with load |
+| `left_right_arithmetic_shift.v` | Shift18 — 64-bit arithmetic shift register |
+| `5bit_lfsr.v` | Lfsr5 — 5-bit maximal-length Galois LFSR |
+| `3bit_lfsr.v` | Mt2015 lfsr — 3-bit LFSR with FPGA-style ports |
+| `lfsr32.v` | Lfsr32 — 32-bit Galois LFSR (taps 32, 22, 2, 1) |
+| `shift4_sync_resetn.v` | Exams/m2014_q4k — 4-bit shift register with sync active-low reset |
+| `muxdff_shift4.v` | Exams/2014_q4b — n-bit shift register from MUXDFF subcircuits |
+| `lut3_shift8.v` | Exams/ece241_2013_q12 — 3-input LUT from an 8-bit shift register |
 
 ## 🛠️ Tools & Environment
 
@@ -241,8 +276,10 @@ gtkwave dump.vcd
 | 08 · Multiplexers | 5 / 5 ✅ |
 | 09 · Arithmetic Circuits | 7 / 7 ✅ |
 | 10 · Karnaugh Maps | 8 / 8 ✅ |
-| 11 · Latches and Flip-Flops | 16 / 18 🔄 |
-| **Total** | **94 solved** |
+| 11 · Latches and Flip-Flops | 18 / 18 ✅ |
+| 12 · Counters | 8 / 8 ✅ |
+| 13 · Shift Registers | 9 / 9 ✅ |
+| **Total** | **113 solved** |
 
 ## 👤 Author
 
