@@ -1,3 +1,6 @@
+// HDLBits: 4 bit shift register with synchronous reset
+// https://hdlbits.01xz.net/wiki/Exams/m2014_q4k
+
 module top_module (
     input clk,
     input resetn,
