@@ -1,3 +1,6 @@
+// HDLBits: 5-bit LFSR
+// https://hdlbits.01xz.net/wiki/Lfsr5
+
 module top_module(
     input clk,
     input reset,
