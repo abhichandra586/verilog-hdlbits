@@ -1,3 +1,6 @@
+// HDLBits: MUXDFF shift register
+// https://hdlbits.01xz.net/wiki/Exams/2014_q4b
+
 module top_module (
     input [3:0] SW,
     input [3:0] KEY,
