@@ -1,3 +1,6 @@
+// HDLBits: 3 input LUT
+// https://hdlbits.01xz.net/wiki/Exams/ece241_2013_q12
+
 module top_module (
     input clk,
     input enable,
