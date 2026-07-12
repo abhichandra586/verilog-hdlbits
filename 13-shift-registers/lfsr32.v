@@ -1,3 +1,5 @@
+// HDLBits: 32-bit LFSR
+// https://hdlbits.01xz.net/wiki/Lfsr32
 module top_module(
     input clk,
     input reset,
