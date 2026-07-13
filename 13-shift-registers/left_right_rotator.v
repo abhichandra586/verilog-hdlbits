@@ -1,3 +1,5 @@
+// HDLBits: Left / Right rotator
+
 module top_module(
     input clk,
     input load,
