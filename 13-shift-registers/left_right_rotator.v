@@ -1,4 +1,5 @@
 // HDLBits: Left / Right rotator
+// https://hdlbits.01xz.net/wiki/Rotate100
 
 module top_module(
     input clk,
