@@ -1,3 +1,6 @@
+// HDLBits: 4 bit shift register
+// https://hdlbits.01xz.net/wiki/Shift4
+
 module top_module(
     input clk,
     input areset,
