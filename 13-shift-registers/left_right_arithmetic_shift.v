@@ -1,4 +1,5 @@
 // HDLBits: Left/Right arithmetic shift by 8 or 1
+// https://hdlbits.01xz.net/wiki/Shift18
 
 module top_module(
     input clk,
