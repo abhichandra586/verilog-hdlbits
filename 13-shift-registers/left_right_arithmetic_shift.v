@@ -1,3 +1,5 @@
+// HDLBits: Left/Right arithmetic shift by 8 or 1
+
 module top_module(
     input clk,
     input load,
