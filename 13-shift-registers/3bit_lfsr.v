@@ -1,3 +1,5 @@
+// HDLBits: 3 bit LFSR
+
 module top_module(
     input [2:0] SW,
     input [1:0] KEY,
