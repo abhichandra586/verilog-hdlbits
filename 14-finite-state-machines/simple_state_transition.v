@@ -1,3 +1,6 @@
+// HDLBits: Simple state transistion 3
+// https://hdlbits.01xz.net/wiki/Fsm3comb
+
 module top_module(
     input in,
     input [1:0] state,
