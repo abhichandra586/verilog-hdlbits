@@ -1,4 +1,5 @@
 // HDLBits: 3 bit LFSR
+// https://hdlbits.01xz.net/wiki/Mt2015_lfsr
 
 module top_module(
     input [2:0] SW,
