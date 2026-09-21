@@ -243,7 +243,7 @@ Shift registers, rotators, arithmetic shifters, and linear feedback shift regist
 | GTKWave | Waveform viewer for .vcd dump files |
 | HDLBits Online Judge | Automated testbench & instant feedback |
 
-All `.v` files are written in Verilog-2001 and are compatible with any standard simulator.
+All `.v` files are written in Verilog-2001 and can be simulated using tools such as Icarus Verilog.
 
 ## 🚀 How to Use
 
